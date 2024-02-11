@@ -34,9 +34,9 @@ if RENDER_EXTERNAL_HOSTNAME:
 
 
 # Application definition
-
+#'render.apps.RenderConfig',
 INSTALLED_APPS = [    
-    'render.apps.RenderConfig',
+    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 #AUTH_USER_MODEL = 'AlexBlog.Usuario'
 #ACCOUNT_SIGNUP_FORM_CLASS = 'AlexBlog.Usuario'
 
+# 'whitenoise.middleware.WhiteNoiseMiddleware', 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -57,7 +58,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',    
-    'whitenoise.middleware.WhiteNoiseMiddleware',    
+      
 ]
 
 
