@@ -143,6 +143,9 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+LOGIN_URL = "login"
+LOGOUT_URL = "logout"
+LOGIN_REDIRECT_URL = "home"
 
 if not DEBUG:
     # Tell Django to copy statics to the `staticfiles` directory
@@ -158,10 +161,6 @@ else:  # Debug mode
     STATIC_ROOT = BASE_DIR / "static"
     STATICFILES_DIRS = [os.path.join(BASE_DIR, "AlexBlog/static")]
 
-    LOGIN_URL = "login"
-    LOGOUT_URL = "logout"
-    LOGIN_REDIRECT_URL = "home"
-
     # Para las imagenes:
-    MEDIA_URL = "imagenes123/"
+    MEDIA_URL = "imagenesPro/"
     MEDIA_ROOT = BASE_DIR / "AlexBlog/static/imagenes"
