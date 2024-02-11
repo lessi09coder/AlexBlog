@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <form action="{% url 'registro' %}" method="post" class="card card-body text-center">
+            <h1>Registrate!</h1>
+            {% csrf_token %}
+
+            {{form.as_table}}
+
+            <p>Ya tienes cuenta? Logeate <a href="/login"> aqui! </a></p>
+            <input type="submit" value="Registrate" class="form-control btn btn-primary">
+
+        </form>
+    </div>
+</div>
+
+{% if error %}
+<h2> {{error}} </h2>
+{% endif %}
+{% endblock %}

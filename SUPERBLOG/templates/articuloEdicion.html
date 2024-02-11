@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% block content %}
+
+{% if user.id == contexto.autor.id %}
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <form method="post" enctype="multipart/form-data" class="card card-body text-center">
+            <h1>Quieres editar tu articulo?</h1>
+
+            {% csrf_token %}
+            {{form.as_table}}
+
+
+            <input type="submit" value="Guardar cambios." class="form-control btn btn-primary">
+
+        </form>
+    </div>
+</div>
+{% else %}
+<div class="container">
+    <H1>NO TENES PERMISO DE EDICION</H1>
+</div>
+
+{% endif %}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="row">
+    <form action="" method="post" enctype="multipart/form-data" class="card card-body text-center">
+        {% csrf_token %}        
+        
+        {{form.as_table}}        
+        
+        <input type="submit" value="Agregar" class="form-control btn btn-primary">
+                
+    </form>
+</div>
+
+
+{% endblock %}

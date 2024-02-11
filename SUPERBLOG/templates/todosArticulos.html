@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<div class="container w-75">
+
+    {% for elemento in articulos %}
+    <section class="row">
+
+        <article class="card card-body text-center my-4">
+            <a href="{% url 'articuloDetalle' elemento.pk %}">
+                <h2>{{ elemento.titulo }}</h2>
+            </a>
+            <h3>{{ elemento.subtitulo }}</h3>
+            <p>{{ elemento.cuerpo }}</p>
+            <img class="img-fluid" src="{{ elemento.imagen.url }}" alt="imagenArticulo">
+            <h3>Autor: {{ elemento.autor}} </h3>
+            
+            <h4>Creado: {{ elemento.fecha}}</h4>
+        </article>
+
+    </section>
+    {% endfor %}
+
+</div>
+
+{% endblock %}
