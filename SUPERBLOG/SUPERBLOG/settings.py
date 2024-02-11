@@ -160,11 +160,9 @@ if not DEBUG:
 STATIC_URL = "/static/"
 #STATIC_ROOT = BASE_DIR / "static"
 
-#STATICFILES_DIRS = [os.path.join(BASE_DIR, "AlexBlog/static")]
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "AlexBlog/static")]
     # Para las imagenes:
     
 MEDIA_URL = "imagenesPro/"
 
-#MEDIA_ROOT = BASE_DIR / "AlexBlog/static/imagenes"
-MEDIA_ROOT = BASE_DIR / "/static/imagenes"
+MEDIA_ROOT = BASE_DIR / "AlexBlog/static/imagenes"
