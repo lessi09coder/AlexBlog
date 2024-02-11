@@ -153,7 +153,7 @@ LOGIN_REDIRECT_URL = 'home'
 
 
 # Para las imagenes:
-MEDIA_URL = 'imagenes/'
+MEDIA_URL = 'imagenes123/'
 MEDIA_ROOT = BASE_DIR / 'AlexBlog/static/imagenes'
 
 if not DEBUG:
