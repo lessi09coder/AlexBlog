@@ -156,11 +156,11 @@ if not DEBUG:
     # and creating unique names for each version so they can safely be cached forever.
     STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-else:  # Debug mode
-    STATIC_URL = "/static/"
-    STATIC_ROOT = BASE_DIR / "static"
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, "AlexBlog/static")]
+
+STATIC_URL = "/static/"
+STATIC_ROOT = BASE_DIR / "static"
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "AlexBlog/static")]
 
     # Para las imagenes:
-    MEDIA_URL = "imagenesPro/"
-    MEDIA_ROOT = BASE_DIR / "AlexBlog/static/imagenes"
+MEDIA_URL = "imagenesPro/"
+MEDIA_ROOT = BASE_DIR / "AlexBlog/static/imagenes"
