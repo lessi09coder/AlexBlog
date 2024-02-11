@@ -80,7 +80,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'SUPERBLOG.wsgi.application'
+WSGI_APPLICATION = 'SUPERBLOG.SUPERBLOG.wsgi.application'
 
 
 # Database
