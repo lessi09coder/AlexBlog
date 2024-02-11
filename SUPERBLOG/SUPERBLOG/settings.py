@@ -36,7 +36,7 @@ if RENDER_EXTERNAL_HOSTNAME:
 # Application definition
 #'render.apps.RenderConfig',
 INSTALLED_APPS = [    
-    
+    'render.apps.RenderConfig'
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -52,6 +52,7 @@ INSTALLED_APPS = [
 # 'whitenoise.middleware.WhiteNoiseMiddleware', 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -89,7 +90,7 @@ WSGI_APPLICATION = 'SUPERBLOG.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Feel free to alter this value to suit your needs.
-        default='sqlite:///SUPERBLOG.db.sqlite3',
+        default='sqlite:///db.sqlite3',
         conn_max_age=600
     )
 }
