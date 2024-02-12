@@ -24,6 +24,8 @@
     </style>
 </head>
 
+{% load static %}    
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -87,6 +89,12 @@
         <!-- El contenido específico de cada página se colocará aquí -->
         {% endblock %}
     </main>
+     
+    <div>
+            
+        <img class="img-fluid" src=" {% static "imagenes/yerba_mate_2" %}" alt="imagenArticulo">
+       
+    </div>
 
     <div class="container mt-5">
         <div class="row">
