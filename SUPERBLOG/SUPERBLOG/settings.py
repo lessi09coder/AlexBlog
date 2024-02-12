@@ -157,16 +157,9 @@ if not DEBUG:
     #STATIC_ROOT = BASE_DIR / "/AlexBlog/static/imagenes"
     # Turn on WhiteNoise storage backend that takes care of compressing static files
     # and creating unique names for each version so they can safely be cached forever.
-    STORAGES = {
-    # ...
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
-    #STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
-    #"whitenoise.storage.CompressedStaticFilesStorage"
     
-    MEDIA_URL = "imagenes/"
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
+    #"whitenoise.storage.CompressedStaticFilesStorage"    
 
 else:
     STATIC_ROOT = BASE_DIR / "static"
