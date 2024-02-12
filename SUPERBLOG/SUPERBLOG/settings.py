@@ -89,13 +89,13 @@ WSGI_APPLICATION = "SUPERBLOG.wsgi.application"
 DATABASES = {
     "default": dj_database_url.config(
         # Feel free to alter this value to suit your needs.
-        default="postgres://databasealexblog123_user:sdvzxHVSwV8ndMWBGlYGCRvorHA4rvAN@dpg-cn4e7idjm4es73bp1a6g-a/databasealexblog123",
+        default="sqlite:///db.sqlite3",
         conn_max_age=600,
     )
-}
+} 
 
-""" 
-DATABASES = {
+
+""" DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
@@ -167,7 +167,7 @@ STATIC_URL = "/static/"
     
 MEDIA_URL = "imagenesPro/"
 
-MEDIA_ROOT = BASE_DIR / "AlexBlog/static/imagenes"
+MEDIA_ROOT = BASE_DIR / "static/imagenes"
 
 if DEBUG:
     STATICFILES_DIRS = [os.path.join(BASE_DIR, "AlexBlog/static")]
