@@ -147,6 +147,8 @@ LOGIN_URL = "login"
 LOGOUT_URL = "logout"
 LOGIN_REDIRECT_URL = "home"
 
+STATIC_URL = "/static/"
+
 if not DEBUG:
     # Tell Django to copy statics to the `staticfiles` directory
     # in your application directory on Render.
@@ -158,18 +160,19 @@ if not DEBUG:
     STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
     #STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
     #"whitenoise.storage.CompressedStaticFilesStorage"
-
     
-STATIC_URL = "/static/"
-STATIC_ROOT = BASE_DIR / "/static/"
+    MEDIA_URL = "imagenes/"
 
-
+else:
+    STATIC_ROOT = BASE_DIR / "/static/"
     
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "AlexBlog/static/")]
+    
+
 MEDIA_URL = "imagenes/"
 
 MEDIA_ROOT = BASE_DIR / "/AlexBlog/static/imagenes"
 
-if DEBUG:
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, "AlexBlog/static/")]
-    # Para las imagenes:
+
+   
     
